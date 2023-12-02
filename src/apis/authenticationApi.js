@@ -1,7 +1,6 @@
 import { api } from "./config/apiConfig";
 
 async function loginUser(username, password) {
-  console.log(username, password);
   try {
     const { data } = await api.post("login", {
       username,
@@ -11,7 +10,6 @@ async function loginUser(username, password) {
     return data;
   } catch (error) {
     alert("Error while login, please try again");
-    console.log(error);
   }
 }
 
@@ -27,19 +25,15 @@ async function refreshToken() {
       return;
     }
 
-    console.log("token");
-    console.log(token);
     const { data } = await api.post(
       "/refresh-token",
-      {}, // Provide an empty object as the request body
+      {},
       {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       }
     );
-    console.log("data");
-    console.log(data);
 
     localStorage.setItem("ccript_user", JSON.stringify(data?.newToken));
   } catch (error) {

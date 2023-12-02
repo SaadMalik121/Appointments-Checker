@@ -1,70 +1,68 @@
 .main_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  
-  .company_name {
-    width: 144px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.company_name {
+  width: 144px;
+}
+
+.form_container {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: 0;
+  border: 0;
+  border-top: 0px solid #0AA36E;
+  border-right: 0px solid #0AA36E;
+  border-bottom: 2px solid #0AA36E;
+  border-left: 0px solid #0AA36E;
+  box-shadow: inset 1px 1px 6px rgba(10, 163, 110, 0.5);
+}
+
+p {
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+button {
+  color: white;
+  background-color: #0AA36E;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Rajdhani';
+}
+
+button:hover {
+  background-color: #068558;
+}
+
+@media screen and (max-width: 600px) {
   .form_container {
-    width: 80%; /* Adjust the width of the form container */
-    max-width: 400px; /* Set a maximum width to avoid stretching on larger screens */
-    margin-top: 20px; /* Add some top margin to separate it from the logo */
-    text-align: left;
+    width: 90%;
   }
-  
-  input {
-    width: 100%; /* Make the input fields full width of the container */
-    margin-bottom: 10px; /* Add some bottom margin between input fields */
-    padding: 10px;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid black;
-  }
-  
-  input:focus {
-    outline: 0;
-    border: 0;
-    border-top: 0px solid #0AA36E;
-    border-right: 0px solid #0AA36E;
-    border-bottom: 2px solid #0AA36E;
-    border-left: 0px solid #0AA36E;
-    box-shadow: inset 1px 1px 6px rgba(10, 163, 110, 0.5);
-  }
-  
-  p {
-    font-weight: 600;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 18px;
-    margin-bottom: 5px; /* Add some bottom margin to separate paragraphs */
-    margin-top: 10px;
-  }
-  
-  button {
-    color: white;
-    background-color: #0AA36E;
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 10px;
-    margin-top: 15px;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: 'Rajdhani';
-  }
-  
-  button:hover {
-    background-color: #068558;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 600px) {
-    .form_container {
-      width: 90%; /* Adjust the width for smaller screens */
-    }
-  }
-  
+}

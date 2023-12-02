@@ -4,8 +4,6 @@ import { api } from "./config/apiConfig";
 async function getAppointments() {
   try {
     const token = JSON.parse(localStorage.getItem("ccript_user"));
-    console.log("token");
-    console.log(token);
 
     if (!token) {
       throw new Error("Access token not available");
@@ -19,8 +17,6 @@ async function getAppointments() {
 
     return response.data;
   } catch (error) {
-    console.error("Error fetching appointments:", error);
-    console.log(error);
     authentication.refreshToken();
     throw error;
   }

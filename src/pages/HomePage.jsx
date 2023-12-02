@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Bars } from "react-loader-spinner";
+
+import { appointmentsApi } from "../apis/appointmentsApi";
+import { authentication } from "../apis/authenticationApi";
 import LogoutSvg from "../assets/images/LogoutIconSvg";
 import LogoSvg from "../assets/images/LogoSvg";
 import styles from "./HomePage.module.css";
-import { authentication } from "../apis/authenticationApi";
-import { useNavigate } from "react-router-dom";
-import { appointmentsApi } from "../apis/appointmentsApi";
 import VectorSvg from "../assets/images/VectorSvg";
-import { Bars } from "react-loader-spinner";
 
 function HomePage() {
   const [appointments, setAppointments] = useState([]);
