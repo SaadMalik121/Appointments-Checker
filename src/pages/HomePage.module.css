@@ -1,0 +1,92 @@
+  .logo {
+    width: 90px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 16px #D9D9D9;
+    padding: 15px 50px;
+    margin-bottom: 30px;
+  }
+
+  .logoutBtn {
+
+    cursor: pointer;
+  }
+
+  .table_container {
+    margin-bottom: 30px;
+    overflow-x: auto;
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .custom_table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    width: 140px;
+    height: 80px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+
+  td:first-child {
+    border-left: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
+  }
+
+  .appointment_cell {
+    position: relative;
+  }
+
+  .appointment_info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #69a3b2;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .refreshIcon {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px;
+    }
+
+    .table_container {
+      width: 100%;
+    }
+
+    th,
+    td {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
